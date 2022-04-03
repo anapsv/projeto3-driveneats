@@ -11,6 +11,7 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="scripts.js"></script>
     <header>
         <h1>DrivenEats</h1>
         <p>Sua comida em 6 minutos</p>
@@ -18,19 +19,19 @@
     <main>
         <h2>Primeiro, seu prato</h2>
         <div class="options">
-            <div class="itens">
+            <div class="item" onclick="toggleBorder1(this)">
                 <img src="images/frango_yin_yang 1.png"/>
                 <p class="productName">Frango Yin Yang</p>
                 <p class="productDescription">Um pouco de batata, um pouco de salada</p>
                 <p class="productPrice" >R$ 14,90</p>
             </div>
-            <div class="itens">
+            <div class="item" onclick="toggleBorder1(this)">
                 <img src="images/frango_yin_yang 1.png"/>
                 <p class="productName">Frango Yin Yang</p>
                 <p class="productDescription">Um pouco de batata, um pouco de salada</p>
                 <p class="productPrice" >R$ 14,90</p>
             </div>
-            <div class="itens">
+            <div class="item" onclick="toggleBorder1(this)">
                 <img src="images/frango_yin_yang 1.png"/>
                 <p class="productName">Frango Yin Yang</p>
                 <p class="productDescription">Um pouco de batata, um pouco de salada</p>
@@ -39,19 +40,19 @@
         </div>
         <h3>Agora, sua bebida</h3>
         <div class="options">
-            <div class="itens">
+            <div class="item" onclick="toggleBorder2(this)">
                 <img src="images/coquinha_gelada 1.png"/>
                 <p class="productName">Coquinha gelada</p>
                 <p class="productDescription">Lata 350ml</p>
                 <p class="productPrice" >R$ 4,90</p>
             </div>
-            <div class="itens">
+            <div class="item" onclick="toggleBorder2(this)">
                 <img src="images/coquinha_gelada 1.png"/>
                 <p class="productName">Coquinha gelada</p>
                 <p class="productDescription">Lata 350ml</p>
                 <p class="productPrice" >R$ 4,90</p>
             </div>
-            <div class="itens">
+            <div class="item" onclick="toggleBorder2(this)">
                 <img src="images/coquinha_gelada 1.png"/>
                 <p class="productName">Coquinha gelada</p>
                 <p class="productDescription">Lata 350ml</p>
@@ -60,19 +61,19 @@
         </div>
         <h3>Por fim, sua sobremesa</h3>
         <div class="options">
-            <div class="itens">
+            <div class="item" onclick="toggleBorder3(this)">
                 <img src="images/pudim 1.png"/>
                 <p class="productName">Pudim</p>
                 <p class="productDescription">Apenas pudim</p>
                 <p class="productPrice" >R$ 7,90</p>
             </div>
-            <div class="itens">
+            <div class="item" onclick="toggleBorder3(this)">
                 <img src="images/pudim 1.png"/>
                 <p class="productName">Pudim</p>
                 <p class="productDescription">Apenas pudim</p>
                 <p class="productPrice" >R$ 7,90</p>
             </div>
-            <div class="itens">
+            <div class="item" onclick="toggleBorder3(this)">
                 <img src="images/pudim 1.png"/>
                 <p class="productName">Pudim</p>
                 <p class="productDescription">Apenas pudim</p>
@@ -83,6 +84,9 @@
     <footer>
         <div class="footerInfo">
             <p>Selecione os 3 itens para fechar o pedido</p>
+        </div>
+        <div class="footerInfo2 hide">
+            <a href="https://wa.me/5541995563733">Fechar pedido</a>
         </div>
     </footer>
 </body>
