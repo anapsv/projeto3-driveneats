@@ -59,10 +59,7 @@ function whatsApp() {
   - Prato: ${prato}
   - Bebida: ${bebida}
   - Sobremesa: ${sobremesa}
-  Total: R$ ${total}
-  
-  Nome: ${nome}
-  Endereço: ${endereco}`);
+  Total: R$ ${total}`);
     document.querySelector(".footerInfo2 a").href =
       "https://wa.me/5541995563733?text=" + uri;
   }
