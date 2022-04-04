@@ -43,9 +43,15 @@ function whatsApp() {
     let food = document.querySelector(".border1").querySelector(".productName").innerHTML;
     let drink = document.querySelector(".border2").querySelector(".productName").innerHTML;
     let dessert = document.querySelector(".border3").querySelector(".productName").innerHTML;
-    let foodPrice = Number(document.querySelector(".border1").querySelector("span").innerHTML);
-    let drinkPrice = Number(document.querySelector(".border2").querySelector("span").innerHTML);
-    let dessertPrice = Number(document.querySelector(".border3").querySelector("span").innerHTML);
+    let foodPrice = document.querySelector(".border1").querySelector("span").innerHTML;
+    foodPrice = foodPrice.replace(",", ".");
+    foodPrice = Number(foodPrice);
+    let drinkPrice = document.querySelector(".border2").querySelector("span").innerHTML;
+    drinkPrice = drinkPrice.replace(",", ".");
+    drinkPrice = Number(drinkPrice);
+    let dessertPrice = document.querySelector(".border3").querySelector("span").innerHTML;
+    dessertPrice = dessertPrice.replace(",", ".");
+    dessertPrice = Number(dessertPrice);
     let totalPrice = Number(foodPrice + drinkPrice + dessertPrice).toFixed(2);
   
     let message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
