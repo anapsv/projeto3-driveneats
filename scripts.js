@@ -36,18 +36,25 @@ function bottomBar() {
 }
 
 function whatsApp() {
-  let food = document.querySelector(".border1").querySelector(".productName").innerHTML;
-  let drink = document.querySelector(".border2").querySelector(".productName").innerHTML;
-  let dessert = document.querySelector(".border3").querySelector(".productName").innerHTML;
-  let foodPrice = Number(document.querySelector(".border1").querySelector("span").innerHTML);
-  let drinkPrice = Number(document.querySelector(".border2").querySelector("span").innerHTML);
-  let dessertPrice = Number(document.querySelector(".border3").querySelector("span").innerHTML);
-  let totalPrice = Number(foodPrice + drinkPrice + dessertPrice).toFixed(2);
-
-  let message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
-  - Prato: ${food}
-  - Bebida: ${drink}
-  - Sobremesa: ${dessert}
-  Total: R$ ${totalPrice}`);
-  document.querySelector(".footerInfo2").querySelector("a").href="https://wa.me/5541995563733?text=" + message;
-}
+    let name, address = "";
+    name = prompt("Qual é o seu nome?");
+    address = prompt("Qual é o seu endereço?");
+  
+    let food = document.querySelector(".border1").querySelector(".productName").innerHTML;
+    let drink = document.querySelector(".border2").querySelector(".productName").innerHTML;
+    let dessert = document.querySelector(".border3").querySelector(".productName").innerHTML;
+    let foodPrice = Number(document.querySelector(".border1").querySelector("span").innerHTML);
+    let drinkPrice = Number(document.querySelector(".border2").querySelector("span").innerHTML);
+    let dessertPrice = Number(document.querySelector(".border3").querySelector("span").innerHTML);
+    let totalPrice = Number(foodPrice + drinkPrice + dessertPrice).toFixed(2);
+  
+    let message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+    - Prato: ${food}
+    - Bebida: ${drink}
+    - Sobremesa: ${dessert}
+    Total: R$ ${totalPrice}
+  
+    Nome: ${name}
+    Endereço: ${address}`);
+    document.querySelector(".footerInfo2").querySelector("a").href ="https://wa.me/5541995563733?text=" + message;
+  }
