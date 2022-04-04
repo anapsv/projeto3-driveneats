@@ -36,30 +36,18 @@ function bottomBar() {
 }
 
 function whatsApp() {
-  
-    let prato = document.querySelector(".border1").querySelector("productName")
-      .innerHTML;
-    let bebida = document.querySelector(".border2").querySelector("productName")
-      .innerHTML;
-    let sobremesa = document
-      .querySelector(".border3")
-      .querySelector("productName").innerHTML;
-    let pratoCusto = Number(
-      document.querySelector(".border1").querySelector("procuctPrice").innerHTML
-    );
-    let bebidaCusto = Number(
-      document.querySelector(".border2").querySelector("productPrice").innerHTML
-    );
-    let sobremesaCusto = Number(
-      document.querySelector(".product3").querySelector("productPrice").innerHTML
-    );
-    let total = (pratoCusto + bebidaCusto + sobremesaCusto).toFixed(2);
-  
-    let uri = encodeURIComponent(`Olá, gostaria de fazer o pedido:
-  - Prato: ${prato}
-  - Bebida: ${bebida}
-  - Sobremesa: ${sobremesa}
-  Total: R$ ${total}`);
-    document.querySelector(".footerInfo2 a").href =
-      "https://wa.me/5541995563733?text=" + uri;
-  }
+  let food = document.querySelector(".border1").querySelector(".productName").innerHTML;
+  let drink = document.querySelector(".border2").querySelector(".productName").innerHTML;
+  let dessert = document.querySelector(".border3").querySelector(".productName").innerHTML;
+  let foodPrice = Number(document.querySelector(".border1").querySelector("span").innerHTML);
+  let drinkPrice = Number(document.querySelector(".border2").querySelector("span").innerHTML);
+  let dessertPrice = Number(document.querySelector(".border3").querySelector("span").innerHTML);
+  let totalPrice = Number(foodPrice + drinkPrice + dessertPrice).toFixed(2);
+
+  let message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+  - Prato: ${food}
+  - Bebida: ${drink}
+  - Sobremesa: ${dessert}
+  Total: R$ ${totalPrice}`);
+  document.querySelector(".footerInfo2").querySelector("a").href="https://wa.me/5541995563733?text=" + message;
+}
